@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.chat-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.chat-container {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.chat-item {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.chat-item.system-message {
+  font-style: italic;
+  color: #333;
+}
+
+.timestamp {
+  color: #333;
+  font-size: 0.8em;
+}
+
+.message-form {
+  display: flex;
+}
+
+.message-form input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.message-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nickname-form {
+  max-width: 300px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.nickname-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.nickname-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
