@@ -1,0 +1,17 @@
+{
+    "name": "chat-app-chat-service",
+    "version": "1.0.0",
+    "description": "Chat processing service for chat application",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "dependencies": {
+        "amqplib": "^0.8.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.14"
+    }
+}

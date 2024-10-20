@@ -1,0 +1,30 @@
+
+services:
+  rabbitmq:
+    image: rabbitmq:4.0.2-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  api-service:
+    build: ./api-service
+    ports:
+      - "5000:5000"
+    environment:
+      - RABBITMQ_URL=amqp://rabbitmq
+    depends_on:
+      - rabbitmq
+
+  chat-service:
+    build: ./chat-service
+    environment:
+      - RABBITMQ_URL=amqp://rabbitmq
+    depends_on:
+      - rabbitmq
+
+  client:
+    build: ./client
+    ports:
+      - "3000:80"
+    depends_on:
+      - api-service
